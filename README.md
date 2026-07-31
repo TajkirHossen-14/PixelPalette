@@ -1,4 +1,8 @@
 <div align="center">
+<p align="center">
+  <img src="https://github.com/TajkirHossen-14/PixelPalette/blob/982d0cc3c96bfeeee8f1a8025db6fbb545c05c31/Assets/Banner/PixelPalette_Banner.png" alt="PixelPalette Banner" width="100%">
+</p>
+
 
 # 🎨 PixelPalette
 
