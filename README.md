@@ -234,6 +234,8 @@ PixelPalette/
 │   ├── Banner/
 │   └── Favicon/
 │
+├── License
+│
 └── README.md
 ```
 
