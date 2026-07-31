@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PixelPalette — a polished, private color picker, palette generator, gradient builder, and contrast checker.">
+  <meta name="theme-color" content="#7c3aed">
+  <title>PixelPalette — Color Picker & Palette Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="PixelPalette home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span>PixelPalette</span>
+      </a>
+      <div class="nav-actions">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle theme"><i data-lucide="moon"></i></button>
+        <a class="github-link" href="https://github.com/TajkirHossen-14/PixelPalette" target="_blank" rel="noopener noreferrer" aria-label="Open PixelPalette on GitHub">
+          <i data-lucide="github"></i><span>GitHub</span><i class="external-icon" data-lucide="arrow-up-right"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="container page-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow"><span></span> Color, beautifully simplified</p>
+      <h1 id="hero-title">Find your perfect <em>palette.</em></h1>
+      <p>Pick a color, explore harmonious combinations, check contrast, and export it all—right from your browser.</p>
+      <div class="hero-actions">
+        <button class="button primary" id="surprise-button" type="button"><i data-lucide="sparkles"></i> Surprise me</button>
+        <button class="button secondary" id="eyedropper-button" type="button"><i data-lucide="pipette"></i> Pick from screen</button>
+      </div>
+    </section>
+
+    <section class="workspace-grid" aria-label="Color workspace">
+      <article class="card picker-card">
+        <div class="card-heading">
+          <div><span class="step">01</span><h2>Choose a color</h2></div>
+          <label class="native-color-wrap" title="Open native color picker">
+            <span>Native picker</span><input id="native-color" type="color" value="#7c3aed" aria-label="Choose color with native picker">
+          </label>
+        </div>
+        <div class="visual-picker" id="visual-picker" role="slider" tabindex="0" aria-label="Color saturation and brightness" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+          <span class="picker-thumb" id="picker-thumb"></span>
+        </div>
+        <label class="hue-control">
+          <span class="sr-only">Hue</span>
+          <input id="hue-slider" type="range" min="0" max="360" value="265" aria-label="Color hue">
+        </label>
+        <div class="picker-meta">
+          <span>Move around to explore</span><span><i data-lucide="mouse-pointer-2"></i> Click & drag</span>
+        </div>
+      </article>
+
+      <article class="card preview-card">
+        <div class="preview-swatch" id="preview-swatch">
+          <div class="preview-badge"><span class="pulse-dot"></span> Live preview</div>
+          <button class="swatch-copy" id="swatch-copy" type="button" aria-label="Copy selected hex color"><i data-lucide="copy"></i></button>
+          <div class="preview-label"><strong id="color-name">Electric Violet</strong><span id="preview-hex">#7C3AED</span></div>
+        </div>
+        <div class="format-list" aria-label="Color formats">
+          <div class="format-row"><span>HEX</span><code id="hex-value">#7C3AED</code><button type="button" class="copy-button" data-copy-target="hex-value" aria-label="Copy HEX"><i data-lucide="copy"></i><span>Copy</span></button></div>
+          <div class="format-row"><span>RGB</span><code id="rgb-value">rgb(124, 58, 237)</code><button type="button" class="copy-button" data-copy-target="rgb-value" aria-label="Copy RGB"><i data-lucide="copy"></i><span>Copy</span></button></div>
+          <div class="format-row"><span>RGBA</span><code id="rgba-value">rgba(124, 58, 237, 1)</code><button type="button" class="copy-button" data-copy-target="rgba-value" aria-label="Copy RGBA"><i data-lucide="copy"></i><span>Copy</span></button></div>
+          <div class="format-row"><span>HSL</span><code id="hsl-value">hsl(262, 83%, 58%)</code><button type="button" class="copy-button" data-copy-target="hsl-value" aria-label="Copy HSL"><i data-lucide="copy"></i><span>Copy</span></button></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="card palette-card" aria-labelledby="palette-title">
+      <div class="card-heading palette-heading">
+        <div><span class="step">02</span><h2 id="palette-title">Build your palette</h2></div>
+        <div class="palette-actions">
+          <button class="button compact secondary" id="favorite-button" type="button"><i data-lucide="heart"></i><span>Save</span></button>
+          <button class="button compact secondary" id="share-button" type="button"><i data-lucide="share-2"></i><span>Share</span></button>
+        </div>
+      </div>
+      <div class="palette-tabs" role="tablist" aria-label="Palette harmony">
+        <button class="palette-tab active" role="tab" aria-selected="true" data-type="complementary">Complementary</button>
+        <button class="palette-tab" role="tab" aria-selected="false" data-type="analogous">Analogous</button>
+        <button class="palette-tab" role="tab" aria-selected="false" data-type="triadic">Triadic</button>
+        <button class="palette-tab" role="tab" aria-selected="false" data-type="monochromatic">Monochromatic</button>
+      </div>
+      <div class="palette-swatches" id="palette-swatches" aria-live="polite"></div>
+      <div class="export-bar">
+        <p><i data-lucide="shield-check"></i> Everything stays in your browser</p>
+        <div>
+          <button class="button compact ghost" id="copy-css-button" type="button"><i data-lucide="braces"></i> CSS</button>
+          <button class="button compact ghost" id="copy-json-button" type="button"><i data-lucide="brackets"></i> JSON</button>
+          <button class="button compact dark" id="export-png-button" type="button"><i data-lucide="download"></i> PNG</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-grid" aria-label="Color tools">
+      <article class="card tool-card gradient-card">
+        <div class="card-heading"><div><span class="step">03</span><h2>Gradient studio</h2></div><i class="heading-icon" data-lucide="blend"></i></div>
+        <div class="gradient-preview" id="gradient-preview"><span>Live gradient</span></div>
+        <div class="gradient-controls">
+          <label>From <span><input type="color" id="gradient-color-one" value="#7c3aed"><code id="gradient-one-label">#7C3AED</code></span></label>
+          <button class="swap-button" id="swap-gradient" type="button" aria-label="Swap gradient colors"><i data-lucide="arrow-left-right"></i></button>
+          <label>To <span><input type="color" id="gradient-color-two" value="#22d3ee"><code id="gradient-two-label">#22D3EE</code></span></label>
+        </div>
+        <label class="select-label">Direction
+          <select id="gradient-direction">
+            <option value="135deg">Diagonal ↘</option><option value="90deg">Left to right →</option><option value="180deg">Top to bottom ↓</option><option value="45deg">Diagonal ↗</option>
+          </select>
+        </label>
+        <div class="code-output"><code id="gradient-code"></code><button id="copy-gradient" type="button" aria-label="Copy gradient CSS"><i data-lucide="copy"></i></button></div>
+      </article>
+
+      <article class="card tool-card contrast-card">
+        <div class="card-heading"><div><span class="step">04</span><h2>Contrast checker</h2></div><i class="heading-icon" data-lucide="scan-eye"></i></div>
+        <div class="contrast-demo" id="contrast-demo"><strong>Read me clearly.</strong><span>Accessible design is better design.</span></div>
+        <div class="contrast-colors">
+          <label>Text <span><input type="color" id="contrast-foreground" value="#ffffff"><code id="foreground-label">#FFFFFF</code></span></label>
+          <label>Background <span><input type="color" id="contrast-background" value="#7c3aed"><code id="background-label">#7C3AED</code></span></label>
+        </div>
+        <div class="contrast-result">
+          <div><span>Contrast ratio</span><strong id="contrast-ratio">5.70:1</strong></div>
+          <div class="wcag-badges"><span id="aa-badge"><i data-lucide="check"></i> AA</span><span id="aaa-badge"><i data-lucide="x"></i> AAA</span></div>
+        </div>
+        <p class="contrast-note" id="contrast-note">Passes AA for normal text and AAA for large text.</p>
+      </article>
+    </section>
+
+    <section class="library-grid" aria-label="Saved colors and palettes">
+      <article class="card library-card">
+        <div class="card-heading"><div><span class="step">05</span><h2>Recent colors</h2></div><button class="text-button" id="clear-recents" type="button">Clear</button></div>
+        <div class="mini-swatches" id="recent-colors"><p class="empty-state">Your recent colors will appear here.</p></div>
+      </article>
+      <article class="card library-card">
+        <div class="card-heading"><div><span class="step">06</span><h2>Saved palettes</h2></div><span class="count-badge" id="favorites-count">0 saved</span></div>
+        <div class="saved-palettes" id="saved-palettes"><p class="empty-state">Save a palette to keep it close.</p></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© 2026 PixelPalette</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><i data-lucide="check-circle-2"></i><span>Copied!</span></div>
+  <canvas id="export-canvas" hidden></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
