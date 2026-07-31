@@ -19,6 +19,20 @@ Create, explore, generate, and export stunning color palettes – all from a cle
 
 </div>
 
+## 📌 Table of Contents
+
+- [📑 About](#-about)
+- [✨ Features](#-features)
+- [🖥️ Technologies Used](#️-technologies-used)
+- [📱 Responsive Design](#-responsive-design)
+- [🌙 Modern UI](#-modern-ui)
+- [🚀 Getting Started](#-getting-started)
+- [📂 Project Structure](#-project-structure)
+- [💡 Future Improvements](#-future-improvements)
+- [🤝 Contributing](#-contributing)
+- [⭐ Support](#-support)
+- [📜 License](#-license)
+
 ---
 
 ## 📑 About
