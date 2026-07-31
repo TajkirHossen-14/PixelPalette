@@ -19,6 +19,8 @@ Create, explore, generate, and export stunning color palettes – all from a cle
 
 </div>
 
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+
 ## 📌 Table of Contents
 
 - [📑 About](#-about)
@@ -284,4 +286,4 @@ If you like this project, consider giving it a **⭐ Star** on GitHub!
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the [MIT License](LICENSE).
