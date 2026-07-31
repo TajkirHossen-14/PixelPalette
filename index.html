@@ -36,21 +36,21 @@
 
   <main id="top" class="container page-shell">
     <section class="hero" aria-labelledby="hero-title">
-      <p class="eyebrow"><span></span> Color, beautifully simplified</p>
+      <p class="eyebrow"><span></span> Color, Beautifully Simplified</p>
       <h1 id="hero-title">Find your perfect <em>palette.</em></h1>
       <p>Pick a color, explore harmonious combinations, check contrast, and export it all – right from your browser.</p>
       <div class="hero-actions">
-        <button class="button primary" id="surprise-button" type="button"><i data-lucide="sparkles"></i> Surprise me</button>
-        <button class="button secondary" id="eyedropper-button" type="button"><i data-lucide="pipette"></i> Pick from screen</button>
+        <button class="button primary" id="surprise-button" type="button"><i data-lucide="sparkles"></i> Surprise Me</button>
+        <button class="button secondary" id="eyedropper-button" type="button"><i data-lucide="pipette"></i> Pick from Screen</button>
       </div>
     </section>
 
     <section class="workspace-grid" aria-label="Color workspace">
       <article class="card picker-card">
         <div class="card-heading">
-          <div><span class="step">01</span><h2>Choose a color</h2></div>
+          <div><span class="step">01</span><h2>Choose a Color</h2></div>
           <label class="native-color-wrap" title="Open native color picker">
-            <span>Native picker</span><input id="native-color" type="color" value="#7c3aed" aria-label="Choose color with native picker">
+            <span>Native Picker</span><input id="native-color" type="color" value="#7c3aed" aria-label="Choose color with native picker">
           </label>
         </div>
         <div class="visual-picker" id="visual-picker" role="slider" tabindex="0" aria-label="Color saturation and brightness" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
@@ -61,13 +61,13 @@
           <input id="hue-slider" type="range" min="0" max="360" value="265" aria-label="Color hue">
         </label>
         <div class="picker-meta">
-          <span>Move around to explore</span><span><i data-lucide="mouse-pointer-2"></i> Click & drag</span>
+          <span>Move around to explore</span><span><i data-lucide="mouse-pointer-2"></i> Click & Drag</span>
         </div>
       </article>
 
       <article class="card preview-card">
         <div class="preview-swatch" id="preview-swatch">
-          <div class="preview-badge"><span class="pulse-dot"></span> Live preview</div>
+          <div class="preview-badge"><span class="pulse-dot"></span> Live Preview</div>
           <button class="swatch-copy" id="swatch-copy" type="button" aria-label="Copy selected hex color"><i data-lucide="copy"></i></button>
           <div class="preview-label"><strong id="color-name">Electric Violet</strong><span id="preview-hex">#7C3AED</span></div>
         </div>
@@ -82,7 +82,7 @@
 
     <section class="card palette-card" aria-labelledby="palette-title">
       <div class="card-heading palette-heading">
-        <div><span class="step">02</span><h2 id="palette-title">Build your palette</h2></div>
+        <div><span class="step">02</span><h2 id="palette-title">Build Your Palette</h2></div>
         <div class="palette-actions">
           <button class="button compact secondary" id="favorite-button" type="button"><i data-lucide="heart"></i><span>Save</span></button>
           <button class="button compact secondary" id="share-button" type="button"><i data-lucide="share-2"></i><span>Share</span></button>
@@ -107,8 +107,8 @@
 
     <section class="tools-grid" aria-label="Color tools">
       <article class="card tool-card gradient-card">
-        <div class="card-heading"><div><span class="step">03</span><h2>Gradient studio</h2></div><i class="heading-icon" data-lucide="blend"></i></div>
-        <div class="gradient-preview" id="gradient-preview"><span>Live gradient</span></div>
+        <div class="card-heading"><div><span class="step">03</span><h2>Gradient Studio</h2></div><i class="heading-icon" data-lucide="blend"></i></div>
+        <div class="gradient-preview" id="gradient-preview"><span>Live Gradient</span></div>
         <div class="gradient-controls">
           <label>From <span><input type="color" id="gradient-color-one" value="#7c3aed"><code id="gradient-one-label">#7C3AED</code></span></label>
           <button class="swap-button" id="swap-gradient" type="button" aria-label="Swap gradient colors"><i data-lucide="arrow-left-right"></i></button>
@@ -116,21 +116,21 @@
         </div>
         <label class="select-label">Direction
           <select id="gradient-direction">
-            <option value="135deg">Diagonal ↘</option><option value="90deg">Left to right →</option><option value="180deg">Top to bottom ↓</option><option value="45deg">Diagonal ↗</option>
+            <option value="135deg">Diagonal ↘</option><option value="90deg">Left to Right →</option><option value="180deg">Top to Bottom ↓</option><option value="45deg">Diagonal ↗</option>
           </select>
         </label>
         <div class="code-output"><code id="gradient-code"></code><button id="copy-gradient" type="button" aria-label="Copy gradient CSS"><i data-lucide="copy"></i></button></div>
       </article>
 
       <article class="card tool-card contrast-card">
-        <div class="card-heading"><div><span class="step">04</span><h2>Contrast checker</h2></div><i class="heading-icon" data-lucide="scan-eye"></i></div>
+        <div class="card-heading"><div><span class="step">04</span><h2>Contrast Checker</h2></div><i class="heading-icon" data-lucide="scan-eye"></i></div>
         <div class="contrast-demo" id="contrast-demo"><strong>Read me clearly.</strong><span>Accessible design is better design.</span></div>
         <div class="contrast-colors">
           <label>Text <span><input type="color" id="contrast-foreground" value="#ffffff"><code id="foreground-label">#FFFFFF</code></span></label>
           <label>Background <span><input type="color" id="contrast-background" value="#7c3aed"><code id="background-label">#7C3AED</code></span></label>
         </div>
         <div class="contrast-result">
-          <div><span>Contrast ratio</span><strong id="contrast-ratio">5.70:1</strong></div>
+          <div><span>Contrast Ratio</span><strong id="contrast-ratio">5.70:1</strong></div>
           <div class="wcag-badges"><span id="aa-badge"><i data-lucide="check"></i> AA</span><span id="aaa-badge"><i data-lucide="x"></i> AAA</span></div>
         </div>
         <p class="contrast-note" id="contrast-note">Passes AA for normal text and AAA for large text.</p>
@@ -139,11 +139,11 @@
 
     <section class="library-grid" aria-label="Saved colors and palettes">
       <article class="card library-card">
-        <div class="card-heading"><div><span class="step">05</span><h2>Recent colors</h2></div><button class="text-button" id="clear-recents" type="button">Clear</button></div>
+        <div class="card-heading"><div><span class="step">05</span><h2>Recent Colors</h2></div><button class="text-button" id="clear-recents" type="button">Clear</button></div>
         <div class="mini-swatches" id="recent-colors"><p class="empty-state">Your recent colors will appear here.</p></div>
       </article>
       <article class="card library-card">
-        <div class="card-heading"><div><span class="step">06</span><h2>Saved palettes</h2></div><span class="count-badge" id="favorites-count">0 saved</span></div>
+        <div class="card-heading"><div><span class="step">06</span><h2>Saved Palettes</h2></div><span class="count-badge" id="favorites-count">0 Saved</span></div>
         <div class="saved-palettes" id="saved-palettes"><p class="empty-state">Save a palette to keep it close.</p></div>
       </article>
     </section>
