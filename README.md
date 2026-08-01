@@ -4,7 +4,7 @@
 </p>
 
 
-# 🎨 PixelPalette
+# 🎨 [PixelPalette](https://pixel-palette-pied.vercel.app) 
 
 ### ✨ Color Picker & Palette Generator
 
