@@ -19,7 +19,7 @@ Create, explore, generate, and export stunning color palettes – all from a cle
 
 </div>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 📌 Table of Contents
 
@@ -35,7 +35,7 @@ Create, explore, generate, and export stunning color palettes – all from a cle
 - [⭐ Support](#-support)
 - [📜 License](#-license)
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 📑 About
 
@@ -47,7 +47,7 @@ No installation. No backend. No login.
 
 Just open the website and start creating.
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## ✨ Features
 
@@ -150,7 +150,7 @@ Generate a unique URL containing your palette.
 
 Share it with anyone instantly.
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 🖥️ Technologies Used
 
@@ -161,7 +161,7 @@ Share it with anyone instantly.
 * 👁️ EyeDropper API
 * 💾 localStorage
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 📱 Responsive Design
 
@@ -172,7 +172,7 @@ PixelPalette is fully responsive and optimized for:
 * 📱 Mobile
 * 📲 Tablet
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 🌙 Modern UI
 
@@ -191,7 +191,7 @@ Designed with a premium user experience in mind.
 * Modern Typography
 * Lucide Icons
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 🚀 Getting Started
 
@@ -215,7 +215,7 @@ index.html
 
 Or use **Live Server** in VS Code for the best experience.
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 📂 Project Structure
 
@@ -239,7 +239,7 @@ PixelPalette/
 └── README.md
 ```
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 💡 Future Improvements
 
@@ -251,7 +251,7 @@ PixelPalette/
 * 🖌️ Figma integration
 * 📊 Palette analytics
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 🤝 Contributing
 
@@ -278,13 +278,13 @@ git push origin feature/NewFeature
 
 5. Open a Pull Request
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## ⭐ Support
 
 If you like this project, consider giving it a **⭐ Star** on GitHub!
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=1&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 📜 License
 
