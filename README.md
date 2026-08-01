@@ -167,8 +167,8 @@ Share it with anyone instantly.
 
 PixelPalette is fully responsive and optimized for:
 
-* 💻 Desktop
-* 🖥️ Laptop
+* 💻 Laptop
+* 🖥️ Desktop
 * 📱 Mobile
 * 📲 Tablet
 
