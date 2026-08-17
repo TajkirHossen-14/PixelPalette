@@ -6,10 +6,6 @@
   <meta name="description" content="PixelPalette – A polished, private color picker, palette generator, gradient builder, and contrast checker.">
   <meta name="theme-color" content="#7c3aed">
   <title>PixelPalette – Color Picker & Palette Generator</title>
-  <link rel="icon" href="Assets/Favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="Assets/Favicon/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="Assets/Favicon/apple-touch-icon.png">
-  <link rel="manifest" href="Assets/Favicon/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -63,6 +59,15 @@
         <div class="picker-meta">
           <span>Move around to explore</span><span><i data-lucide="mouse-pointer-2"></i> Click & Drag</span>
         </div>
+        <form class="hex-entry" id="hex-entry-form" novalidate>
+          <label for="hex-input">HEX Color</label>
+          <div class="hex-input-row">
+            <span aria-hidden="true">#</span>
+            <input id="hex-input" type="text" value="7C3AED" maxlength="7" autocomplete="off" spellcheck="false" inputmode="text" aria-describedby="hex-feedback" aria-invalid="false" placeholder="7C3AED">
+            <button type="submit">Apply</button>
+          </div>
+          <p id="hex-feedback" class="hex-feedback" aria-live="polite">Enter a 3 or 6 digit HEX value.</p>
+        </form>
       </article>
 
       <article class="card preview-card">
