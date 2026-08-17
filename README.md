@@ -54,6 +54,7 @@ Just open the website and start creating.
 ### 🎨 Interactive Color Picker
 
 * Visual color picker
+* Manual HEX code entry
 * Instant live preview
 * Real-time updates
 
