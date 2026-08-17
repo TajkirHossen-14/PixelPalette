@@ -30,6 +30,7 @@
 
   const els = {
     visual: $("#visual-picker"), thumb: $("#picker-thumb"), hue: $("#hue-slider"), native: $("#native-color"),
+    hexForm: $("#hex-entry-form"), hexInput: $("#hex-input"), hexFeedback: $("#hex-feedback"),
     preview: $("#preview-swatch"), previewHex: $("#preview-hex"), name: $("#color-name"),
     swatches: $("#palette-swatches"), recents: $("#recent-colors"), saved: $("#saved-palettes"),
     toast: $("#toast"), favorite: $("#favorite-button")
@@ -141,6 +142,7 @@
     els.visual.style.background = `linear-gradient(to top,#000,transparent),linear-gradient(to right,#fff,transparent),hsl(${hsv.h},100%,50%)`;
     els.thumb.style.left = `${hsv.s}%`; els.thumb.style.top = `${100-hsv.v}%`;
     els.hue.value = hsv.h; els.native.value = normalized.toLowerCase();
+    if (document.activeElement !== els.hexInput) els.hexInput.value = normalized.slice(1);
     els.preview.style.background = normalized; els.preview.style.color = readableText(normalized);
     els.previewHex.textContent = normalized; els.name.textContent = nearestName(normalized);
     $("#hex-value").textContent = normalized;
@@ -216,6 +218,35 @@
   els.hue.addEventListener("input", () => { state.hue=Number(els.hue.value); setFromHsv(false); });
   els.hue.addEventListener("change", () => addRecent(state.hex));
   els.native.addEventListener("input", () => setColor(els.native.value)); els.native.addEventListener("change", () => addRecent(state.hex));
+
+  function applyManualHex() {
+    const raw = els.hexInput.value.trim().replace(/^#/, "");
+    if (!/^([0-9a-f]{3}|[0-9a-f]{6})$/i.test(raw)) {
+      els.hexForm.classList.remove("valid"); els.hexForm.classList.add("invalid");
+      els.hexInput.setAttribute("aria-invalid", "true");
+      els.hexFeedback.textContent = "Enter a valid 3 or 6 digit HEX value.";
+      return;
+    }
+    const expanded = raw.length === 3 ? raw.split("").map(char => char + char).join("") : raw;
+    setColor(`#${expanded}`, {save:true});
+    els.hexInput.value = expanded.toUpperCase();
+    els.hexForm.classList.remove("invalid"); els.hexForm.classList.add("valid");
+    els.hexInput.setAttribute("aria-invalid", "false");
+    els.hexFeedback.textContent = "Color applied successfully.";
+    showToast("HEX color applied", "palette");
+    clearTimeout(applyManualHex.timer);
+    applyManualHex.timer = setTimeout(() => {
+      els.hexForm.classList.remove("valid");
+      els.hexFeedback.textContent = "Enter a 3 or 6 digit HEX value.";
+    }, 2200);
+  }
+  els.hexForm.addEventListener("submit", event => { event.preventDefault(); applyManualHex(); });
+  els.hexInput.addEventListener("input", () => {
+    els.hexInput.value = els.hexInput.value.replace(/[^#0-9a-f]/gi, "").slice(0, 7).toUpperCase();
+    els.hexForm.classList.remove("invalid", "valid");
+    els.hexInput.setAttribute("aria-invalid", "false");
+    els.hexFeedback.textContent = "Enter a 3 or 6 digit HEX value.";
+  });
 
   $("#surprise-button").addEventListener("click", () => {
     const hex=rgbToHex(Math.random()*255,Math.random()*255,Math.random()*255); setColor(hex,{save:true});
