@@ -32,8 +32,8 @@ Create, explore, generate, and export stunning color palettes – all from a cle
 - [📂 Project Structure](#-project-structure)
 - [💡 Future Improvements](#-future-improvements)
 - [🤝 Contributing](#-contributing)
-- [⭐ Support](#-support)
 - [📜 License](#-license)
+- [⭐ Support](#-support)
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
@@ -279,14 +279,15 @@ git push origin feature/NewFeature
 
 5. Open a Pull Request
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
-
-## ⭐ Support
-
-If you like this project, consider giving it a **⭐ Star** on GitHub!
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
 
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=381eaf&height=2&section=header"/>
+
+## ⭐ Support
+
+If you like this project, consider giving it a **⭐ Star** on GitHub!
