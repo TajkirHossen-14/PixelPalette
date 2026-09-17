@@ -31,7 +31,7 @@ Create, explore, generate, and export stunning color palettes – all from a cle
 - [🚀 Getting Started](#-getting-started)
 - [📂 Project Structure](#-project-structure)
 - [💡 Future Improvements](#-future-improvements)
-- [🤝 Contributing](#-contributing)
+- [🤝🏼 Contributing](#-contributing)
 - [📜 License](#-license)
 - [⭐ Support](#-support)
 
